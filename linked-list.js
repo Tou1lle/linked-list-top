@@ -33,6 +33,16 @@ class LinkedList {
     node.next = previousNext;
   }
 
+  getSize() {
+    let size = 0;
+    let tmp = this.head.next;
+    while (tmp) {
+      tmp = tmp.next;
+      size++;
+    }
+    return size;
+  }
+
   get head() {
     return this.#head;
   }
