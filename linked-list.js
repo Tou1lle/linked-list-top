@@ -22,6 +22,17 @@ class LinkedList {
     tmp.next = node;
   }
 
+  prepend(node) {
+    if (this.head.next === null) {
+      this.head.next = node;
+      return;
+    }
+
+    const previousNext = this.head.next;
+    this.head.next = node;
+    node.next = previousNext;
+  }
+
   get head() {
     return this.#head;
   }
