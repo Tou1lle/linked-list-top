@@ -19,3 +19,5 @@ console.log("3rd item: " + list.head.next.next.next.value);
 console.log("4th item: " + list.head.next.next.next.next.value);
 console.log("5th item: " + list.head.next.next.next.next.next.value);
 console.log("Size after 5 items: " + list.getSize());
+console.log("First item in list: " + list.getHead().value);
+console.log("Last item in list: " + list.getTail().value);

@@ -18,7 +18,7 @@ class LinkedList {
       tmp = tmp.next;
     }
     if (tmp.next != null || tmp === null || typeof tmp != "object") return;
-    
+
     tmp.next = node;
   }
 
@@ -41,6 +41,23 @@ class LinkedList {
       size++;
     }
     return size;
+  }
+
+  getHead() {
+    return this.head.next;
+  }
+
+  getTail() {
+    if (this.head.next === null) {
+      return this.head;
+    }
+
+    let tmp = this.head.next;
+    while (tmp.next != null) {
+      tmp = tmp.next;
+    }
+
+    return tmp;
   }
 
   get head() {
