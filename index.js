@@ -7,8 +7,10 @@ console.log(list.head);
 console.log("Inital size: " + list.getSize());
 
 console.log("Contains on an empty List: " + list.contains("First"));
+console.log("Find on empty: " + list.find("First"));
 list.append(new NodeItem("First"));
 console.log("Contains after only 1 item: " + list.contains("First"));
+console.log("Find after only 1 item: " + list.find("First"));
 list.append(new NodeItem("Second"));
 list.append(new NodeItem("Third"));
 list.prepend(new NodeItem("Fourth"));
@@ -34,3 +36,9 @@ console.log("\nList contains certain value");
 console.log("Contains First: " + list.contains("First"));
 console.log("Contains Fifth (last item): " + list.contains("Fifth"));
 console.log("Contains some random: " + list.contains("Random"));
+
+console.log("\nFind index of searched value");
+console.log("Find First value index: " + list.find("First"));
+console.log("Find Fourth value index: " + list.find("Fourth"));
+console.log("Find Fifth (last) index: " + list.find("Fifth"));
+console.log("Find non-existent: " + list.find("None"));

@@ -94,6 +94,17 @@ class LinkedList {
     return false;
   }
 
+  find(value) {
+    if (this.getSize() === 0) return null;
+    let node = this.getHead();
+    for (let i = 0; i < this.getSize(); i++) {
+      if (node.value === value) return i;
+      node = node.next;
+    }
+
+    return null;
+  }
+
   get head() {
     return this.#head;
   }
