@@ -72,6 +72,16 @@ class LinkedList {
     return node;
   } 
 
+  pop() {
+    if (this.getSize() === 0) return;
+    if (this.getSize() === 1) {
+      this.head.next = null;
+      return;
+    }
+
+    this.at(this.getSize() - 2).next = null;
+  }
+
   get head() {
     return this.#head;
   }
