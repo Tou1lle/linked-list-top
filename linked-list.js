@@ -111,6 +111,19 @@ class LinkedList {
   set head(node) {
     this.#head = node;
   }
+
+  toString() {
+    if (this.getSize() === 0) return `${this.head.next}`;
+    let stringRepresentaion = "";
+    let node = this.getHead();
+    for (let i = 0; i < this.getSize(); i++) {
+      stringRepresentaion = stringRepresentaion.concat("( ", node.value, " ) -> ");
+      node = node.next;
+    }
+
+    stringRepresentaion = stringRepresentaion.concat("null");
+    return stringRepresentaion;
+  }
 }
 
 export { LinkedList };

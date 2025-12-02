@@ -8,9 +8,11 @@ console.log("Inital size: " + list.getSize());
 
 console.log("Contains on an empty List: " + list.contains("First"));
 console.log("Find on empty: " + list.find("First"));
+console.log("String representaion on empty List: " + list.toString());
 list.append(new NodeItem("First"));
 console.log("Contains after only 1 item: " + list.contains("First"));
 console.log("Find after only 1 item: " + list.find("First"));
+console.log("String represention with 1 Node: " + list.toString());
 list.append(new NodeItem("Second"));
 list.append(new NodeItem("Third"));
 list.prepend(new NodeItem("Fourth"));
@@ -42,3 +44,6 @@ console.log("Find First value index: " + list.find("First"));
 console.log("Find Fourth value index: " + list.find("Fourth"));
 console.log("Find Fifth (last) index: " + list.find("Fifth"));
 console.log("Find non-existent: " + list.find("None"));
+
+console.log("\nString representation");
+console.log(list.toString());
