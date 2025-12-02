@@ -21,3 +21,9 @@ console.log("5th item: " + list.head.next.next.next.next.next.value);
 console.log("Size after 5 items: " + list.getSize());
 console.log("First item in list: " + list.getHead().value);
 console.log("Last item in list: " + list.getTail().value);
+
+console.log("\nGetting the Node at specific index")
+console.log("Index 0 value: " + list.at(0).value);
+console.log("Index 4 value: " + list.at(4).value);
+console.log("Index 2 value: " + list.at(2).value);
+console.log("Out of bound value: " + list.at(5));

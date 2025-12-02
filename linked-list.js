@@ -60,6 +60,18 @@ class LinkedList {
     return tmp;
   }
 
+  at(index) {
+    let node = this.getHead();
+    if (this.getSize() - 1 < index) return null;
+    if (index === 0) return node;
+
+    for (let i = 1; i <= index; i++) {
+      node = node.next;
+    }
+
+    return node;
+  } 
+
   get head() {
     return this.#head;
   }
