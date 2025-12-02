@@ -82,6 +82,18 @@ class LinkedList {
     this.at(this.getSize() - 2).next = null;
   }
 
+  contains(value) {
+    if (this.getSize() === 0) return false;
+    let node = this.getHead();
+
+    for (let i = 0; i < this.getSize(); i++) {
+      if (node.value === value) return true;
+      node = node.next;
+    }
+
+    return false;
+  }
+
   get head() {
     return this.#head;
   }
